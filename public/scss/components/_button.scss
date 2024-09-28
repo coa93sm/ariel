@@ -1,0 +1,32 @@
+.btn {
+  border: none;
+  justify-self: start;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &--accent,
+  &--shop {
+    background-color: var(--clr-accent);
+    color: #fff;
+  }
+
+  &--shop {
+    text-transform: none;
+    padding: 0.5em;
+    &:hover {
+      background-color: #de82b9;
+    }
+  }
+
+  &--accent {
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.15);
+    }
+    &:active {
+      transform: translateY(-0.15rem);
+      box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

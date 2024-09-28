@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto";
+  font-size: var(--fs-100);
+  font-weight: var(--fw-200);
+  color: var(--clr-text);
+  line-height: 1.5;
+}
+
+.header {
+  color: var(--clr-white);
+}
+
+.heading {
+  &--primary {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-400);
+  }
+
+  &--secondary {
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &--tertiary {
+    font-size: var(--fs-150);
+    font-weight: var(--fw-400);
+  }
+
+  &--sub {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+    font-weight: var(--fw-400);
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      display: block;
+      height: 0.1rem;
+      background-color: #fff;
+    }
+  }
+}

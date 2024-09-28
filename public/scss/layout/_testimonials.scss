@@ -1,0 +1,58 @@
+.testimonials {
+  --col: 2;
+  display: grid;
+  gap: 2rem;
+  padding: 1rem 1rem 1rem 0;
+  overflow: hidden;
+  grid-template-columns: repeat(var(--col), 1fr);
+
+  @media (width < 60em) {
+    --col: 1;
+  }
+}
+
+.testimonial {
+  display: grid;
+  position: relative;
+  padding: 3rem;
+  gap: 2rem;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  border-left: 0.15rem solid var(--clr-accent);
+
+  opacity: 0;
+  transition: all 0.6s;
+
+  &--l {
+    transform: translateX(-30%);
+  }
+  &--r {
+    transform: translateX(30%);
+  }
+
+  &__quote {
+    z-index: 1000;
+  }
+
+  &::before {
+    content: "\201F";
+    position: absolute;
+    top: -5rem;
+    right: 0.5rem;
+    color: rgba(206, 142, 179, 0.6);
+    font-size: 15rem;
+  }
+
+  &__info {
+    justify-self: end;
+  }
+
+  &__slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  @media (width < 37.5em) {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}

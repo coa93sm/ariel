@@ -1,0 +1,18 @@
+.container {
+  grid-column: container-start/container-end;
+  margin: 2rem 0;
+
+  h2 {
+    text-align: start;
+    border-bottom: 1px solid var(--clr-accent);
+    padding: 1rem 0;
+  }
+
+  &__summary {
+    width: 100%;
+  }
+}
+
+.contact__form {
+  grid-column: container-start/container-end;
+}

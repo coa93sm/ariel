@@ -1,0 +1,44 @@
+.header {
+  @include subgrid;
+  place-content: center;
+  grid-column: 1/-1;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../../css/img/photo-1531995811006-35cb42e1a022.avif);
+
+  &__container {
+    grid-column: container-start / container-end;
+    max-width: 40rem;
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-5rem);
+    animation: load 1s ease 0.2s forwards;
+  }
+
+  &__span {
+    display: block;
+  }
+
+  @media (width < 70em) {
+    background-position-x: -50rem;
+  }
+
+  @media (width < 37.5em) {
+    background-position-x: -74rem;
+    background-position-y: -11rem;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}

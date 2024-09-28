@@ -1,0 +1,28 @@
+.main-grid {
+  --padding: 3rem;
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    var(--padding) [main-start] 1fr [container-start] minmax(0, 70rem)
+    [container-end] 1fr [main-end] var(--padding) [full-end];
+  grid-template-rows: 4rem calc(100vh - 4rem) auto 4rem;
+
+  &--shop {
+    grid-template-rows: 4rem;
+  }
+
+  @media (width < 37.5rem) {
+    --padding: 1rem;
+  }
+
+  &::before {
+    content: "";
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+}
+
+.test {
+  height: 100vh;
+}

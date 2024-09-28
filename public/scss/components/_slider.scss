@@ -1,0 +1,47 @@
+.slider {
+  --g: 2rem;
+  --c: 4;
+  position: relative;
+  &__wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (var(--c) - 1) * var(--g)) / var(--c));
+    overflow: hidden;
+    gap: var(--g);
+    padding: 1rem;
+    scroll-behavior: smooth;
+  }
+
+  &__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-content: center;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--clr-accent);
+    color: #fff;
+
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
+
+  @media (width < 80em) {
+    --c: 3;
+  }
+
+  @media (width < 60em) {
+    --c: 2;
+  }
+
+  @media (width < 40em) {
+    --c: 1;
+  }
+}

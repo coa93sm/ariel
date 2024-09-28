@@ -1,0 +1,15 @@
+.main {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: subgrid;
+  margin-bottom: 5rem;
+
+  &--shop {
+    margin-bottom: 0;
+  }
+}
+
+.section {
+  grid-column: container-start/container-end;
+  padding: 5rem 0 0 0;
+}
